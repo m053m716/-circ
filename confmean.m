@@ -70,7 +70,7 @@ for i = 1:numel(r)
     t(i) = sqrt(n(i)^2-(n(i)^2-R(i)^2)*exp(c2/n(i)));      % equ. 26.25
   else 
     t(i) = NaN;
-    warning('Requirements for confidence levels not met.');
+    warning('CIRC:CONFMEAN:R_TOO_SMALL', 'Requirements for confidence levels not met.');
   end
 end
 
