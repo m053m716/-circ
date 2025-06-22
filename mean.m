@@ -49,7 +49,8 @@ end
 r = sum(w.*exp(1i*alpha),dim);
 
 % obtain mean by
-mu = angle(r);
+% mu = angle(r);
+mu = atan2(imag(r),real(r));
 
 % confidence limits if desired
 if nargout > 1
