@@ -35,5 +35,6 @@ density = density / (2 * pi * besseli(0, kappa));
 if options.Normalize
     density = density / numel(theta); % normalize
 end
+density(density < 1e-12) = 0; % Clamp for numeric precision issues producing small negative values
 
 end
